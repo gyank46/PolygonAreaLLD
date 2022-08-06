@@ -23,6 +23,9 @@ public class PolygonAreaApplication {
         Circle c = new Circle(6);
         c.calculateArea();
 
+        Parallelogram p = new Parallelogram(8,6);
+        p.calculateArea();
+
         SpringApplication.run(PolygonAreaApplication.class, args);
 
 
