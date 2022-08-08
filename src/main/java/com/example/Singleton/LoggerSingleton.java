@@ -1,4 +1,4 @@
-package com.example.polygonarea;
+package com.example.Singleton;
 
 public class LoggerSingleton {
 
