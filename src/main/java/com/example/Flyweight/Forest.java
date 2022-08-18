@@ -6,16 +6,19 @@ import java.util.List;
 public class Forest {
 
     List<Tree> trees = new ArrayList<Tree>();
+    String canvas;
+    public Forest(String canvas){
+        this.canvas = canvas;
+    }
 
-    void plantTree(int x, int y, String name, String color, String texture, String canvas){
+    public void plantTree(int x, int y, String name, String color, String texture){
 
         TreeType treeType = TreeTypeFactory.getTreeType(name,color,texture);
-
-        Tree tree = new Tree(x,y,canvas,treeType);
+        Tree tree = new Tree(x,y,treeType);
         trees.add(tree);
     }
 
-    void draw(String canvas){
+    public void draw(){
         for (Tree tree: trees) {
             tree.draw(canvas);
         }
