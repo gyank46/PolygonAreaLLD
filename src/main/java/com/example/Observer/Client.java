@@ -25,6 +25,11 @@ public class Client {
         userService.handleUserSignUpEvent(user);
         userService.handleUserLoginEvent(user);
 
+        mobileOTPHandler.unsubscribeToUserSignUpEventHandlers();
+
+        userService.handleUserSignUpEvent(user);
+        userService.handleUserLoginEvent(user);
+
 
 
 

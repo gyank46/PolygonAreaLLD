@@ -3,7 +3,7 @@ package com.example.Observer;
 public class EmailConfirmationHandler implements UserSignUpEventHandler{
 
     UserService userService = UserService.getInstance();
-
+    
     public void subscribeToUserSignUpEventHandlers(){
         userService.subscribeSignUpEventHandler(this);
     }
