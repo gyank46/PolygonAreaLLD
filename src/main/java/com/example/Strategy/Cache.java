@@ -3,11 +3,9 @@ package com.example.Strategy;
 public class Cache {
 
     private CacheStrategy cacheStrategy;
-    private int cachesize;
 
     public Cache(CacheStrategy cacheStrategy){
         this.cacheStrategy = cacheStrategy;
-        this.cachesize = cachesize;
     }
 
     public void add(CacheContainer val){
