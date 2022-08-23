@@ -17,18 +17,18 @@ public class Client {
         userService.subscribeSignUpEventHandler(mobileOTPHandler);
 
         UserLoginEventHandler emailOTPHandler = new EmailOTPHandler();
-        UserLoginEventHandler loginMobileOTPHandler = new MobileOTPHandler();
+//        UserLoginEventHandler loginMobileOTPHandler = new MobileOTPHandler();
 
         userService.subscribeUserLoginEventHandler(emailOTPHandler);
-        userService.subscribeUserLoginEventHandler(loginMobileOTPHandler);
+//        userService.subscribeUserLoginEventHandler(loginMobileOTPHandler);
 
         userService.handleUserSignUpEvent(user);
         userService.handleUserLoginEvent(user);
 
-        mobileOTPHandler.unsubscribeToUserSignUpEventHandlers();
-
-        userService.handleUserSignUpEvent(user);
-        userService.handleUserLoginEvent(user);
+//        mobileOTPHandler.unsubscribeToUserSignUpEventHandlers();
+//
+//        userService.handleUserSignUpEvent(user);
+//        userService.handleUserLoginEvent(user);
 
 
 
