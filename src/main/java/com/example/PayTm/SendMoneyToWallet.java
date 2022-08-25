@@ -8,6 +8,7 @@ public class SendMoneyToWallet implements SendMoney{
     @Override
     public Transaction sendMoney(User sender,float amount) {
         Transaction newtransaction = new Transaction(sender,amount,new Date(),TransactionStatus.INITIATED,ReceiverType.WALLET);
+        Repo.transactionid_wallet_mapping.put(newtransaction.transactionId,this.wallet);
         return newtransaction;
     }
 

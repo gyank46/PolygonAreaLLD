@@ -7,6 +7,7 @@ public class SendMoneyToBankAccount implements SendMoney{
     @Override
     public Transaction sendMoney(User sender,float amount) {
         Transaction newtransaction = new Transaction(sender,amount,new Date(),TransactionStatus.INITIATED,ReceiverType.BANKACCOUNT);
+        Repo.transactionid_bankAccount_mapping.put(newtransaction.transactionId, this.account);
         return newtransaction;
     }
 

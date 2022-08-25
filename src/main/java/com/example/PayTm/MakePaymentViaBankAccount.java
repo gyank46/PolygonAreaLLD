@@ -5,9 +5,21 @@ public class MakePaymentViaBankAccount implements MakePayment{
 
     @Override
     public void makePayment( Transaction transaction) {
-        if(transaction.status!=TransactionStatus.SUCCESSFUL){
+        if(transaction.status!=TransactionStatus.SUCCESSFUL && bankAccount.amount>transaction.amount){
             System.out.println("Paying "+ transaction.amount + " via Bank account "+ this.bankAccount.bankAccount);
+            bankAccount.amount-=transaction.amount;
+            System.out.println("Remaining balance in Sender "+bankAccount.bankAccount+" :"+bankAccount.amount);
+            if(transaction.receiverType == ReceiverType.BANKACCOUNT){
+                BankAccount recipient = Repo.transactionid_bankAccount_mapping.get(transaction.transactionId);
+                recipient.amount+= transaction.amount;;
+                System.out.println("Remaining balance in Receiver "+ recipient.bankAccount+" :"+recipient.amount);
+            }else if(transaction.receiverType==ReceiverType.WALLET){
+                Wallet recipient = Repo.transactionid_wallet_mapping.get(transaction.transactionId);
+                recipient.amount+=transaction.amount;
+                System.out.println("Wallet balance of Receiver " + recipient.walletId+ " : "+ recipient.amount);
+            }
             transaction.status = TransactionStatus.SUCCESSFUL;
+
         }
 
     }

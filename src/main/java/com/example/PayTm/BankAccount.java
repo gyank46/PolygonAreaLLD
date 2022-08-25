@@ -8,11 +8,14 @@ public class BankAccount{
     String ifscCode;
     String bankAccount;
 
+    float amount;
 
-    public BankAccount(String bankName, String ifscCode, String bankAccount){
+
+    public BankAccount(String bankName, String ifscCode, String bankAccount, float amount){
         this.bankAccount = bankAccount;
         this.ifscCode = ifscCode;
         this.bankName = bankName;
+        this.amount = amount;
     }
 
 }
