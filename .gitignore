@@ -5,6 +5,8 @@ target/
 !**/src/test/**/target/
 
 ### STS ###
+.gitignore
+.DS_Store
 .apt_generated
 .classpath
 .factorypath
