@@ -1,17 +1,17 @@
-package com.example.PayTm;
+package com.example.PayTm.Models;
 
-import javax.sound.midi.Receiver;
+import com.example.PayTm.ReceiverType;
+import com.example.PayTm.TransactionStatus;
+
 import java.util.Date;
-import java.util.Timer;
-import java.util.UUID;
 
 public class Transaction {
-    float amount;
-    User user;
-    Date date;
-    TransactionStatus status;
-    ReceiverType receiverType;
-    String transactionId;
+    public float amount;
+    public User user;
+    public Date date;
+    public TransactionStatus status;
+    public ReceiverType receiverType;
+    public String transactionId;
 
 
     public Transaction(User user,float amount, Date date, TransactionStatus status, ReceiverType receiverType) {

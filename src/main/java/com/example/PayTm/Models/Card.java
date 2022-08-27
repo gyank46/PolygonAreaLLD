@@ -1,11 +1,11 @@
-package com.example.PayTm;
+package com.example.PayTm.Models;
 
 import java.util.Date;
 
 public class Card {
-    String ownerName;
-    String cardNumber;
-    String CVV;
+    public String ownerName;
+    public String cardNumber;
+    public String CVV;
 
 
     public Card(String cardNumber, String ownerName, String CVV,float balance){

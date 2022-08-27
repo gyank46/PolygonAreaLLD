@@ -1,6 +1,11 @@
-package com.example.PayTm;
+package com.example.PayTm.Payment;
 
-public class MakePaymentViaWallet implements MakePayment{
+import com.example.PayTm.*;
+import com.example.PayTm.Models.BankAccount;
+import com.example.PayTm.Models.Transaction;
+import com.example.PayTm.Models.Wallet;
+
+public class MakePaymentViaWallet implements MakePayment {
     private final Wallet wallet;
 
     public MakePaymentViaWallet(Wallet wallet) {
@@ -13,7 +18,7 @@ public class MakePaymentViaWallet implements MakePayment{
             wallet.amount-= transaction.amount;
             System.out.println("Paying "+transaction.amount+" via wallet");
             System.out.println("Wallet balance of Sender " + transaction.user.name+ ": "+ wallet.amount);
-            if(transaction.receiverType==ReceiverType.WALLET){
+            if(transaction.receiverType== ReceiverType.WALLET){
                 Wallet recipient = Repo.transactionid_wallet_mapping.get(transaction.transactionId);
                 recipient.amount+=transaction.amount;
                 System.out.println("Wallet balance of Receiver " + recipient.walletId+ " : "+ recipient.amount);

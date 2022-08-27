@@ -1,4 +1,4 @@
-package com.example.PayTm;
+package com.example.PayTm.Models;
 
 public class Recipient {
 

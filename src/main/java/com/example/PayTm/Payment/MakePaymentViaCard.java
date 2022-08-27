@@ -1,6 +1,10 @@
-package com.example.PayTm;
+package com.example.PayTm.Payment;
 
-public class MakePaymentViaCard implements MakePayment{
+import com.example.PayTm.Models.Card;
+import com.example.PayTm.Models.Transaction;
+import com.example.PayTm.TransactionStatus;
+
+public class MakePaymentViaCard implements MakePayment {
     private final Card card;
 
     public MakePaymentViaCard(Card card) {

@@ -1,14 +1,14 @@
-package com.example.PayTm;
+package com.example.PayTm.Models;
 
 import java.security.PublicKey;
 import java.util.UUID;
 
 public class BankAccount{
-    String bankName;
-    String ifscCode;
-    String bankAccount;
+    public String bankName;
+    public String ifscCode;
+    public String bankAccount;
 
-    float amount;
+    public float amount;
 
 
     public BankAccount(String bankName, String ifscCode, String bankAccount, float amount){

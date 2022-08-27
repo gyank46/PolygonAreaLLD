@@ -1,4 +1,4 @@
-package com.example.PayTm;
+package com.example.PayTm.Models;
 
 import java.util.UUID;
 
@@ -27,10 +27,10 @@ public class User {
         this.contactNumber = contactNumber;
     }
 
-    String name;
-    String emailID;
-    String contactNumber;
-    String userid;
+    public String name;
+    public String emailID;
+    public String contactNumber;
+    public String userid;
 
     public User(String name, String emailID, String contactNumber){
         this.name=name;

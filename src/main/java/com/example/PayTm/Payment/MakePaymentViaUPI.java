@@ -1,6 +1,10 @@
-package com.example.PayTm;
+package com.example.PayTm.Payment;
 
-public class MakePaymentViaUPI implements MakePayment{
+import com.example.PayTm.Models.Transaction;
+import com.example.PayTm.TransactionStatus;
+import com.example.PayTm.Models.UPIId;
+
+public class MakePaymentViaUPI implements MakePayment {
 
     private final UPIId upiId;
 

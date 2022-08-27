@@ -1,8 +1,8 @@
-package com.example.PayTm;
+package com.example.PayTm.Models;
 
 public class Wallet {
-    String walletId;
-    float amount;
+    public String walletId;
+    public float amount;
 
     public Wallet(String walletId, float amoount){
         this.amount=amoount;

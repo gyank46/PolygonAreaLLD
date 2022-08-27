@@ -1,11 +1,16 @@
-package com.example.PayTm;
+package com.example.PayTm.Payment;
 
-public class MakePaymentViaBankAccount implements MakePayment{
+import com.example.PayTm.*;
+import com.example.PayTm.Models.BankAccount;
+import com.example.PayTm.Models.Transaction;
+import com.example.PayTm.Models.Wallet;
+
+public class MakePaymentViaBankAccount implements MakePayment {
     private final BankAccount bankAccount;
 
     @Override
     public void makePayment( Transaction transaction) {
-        if(transaction.status!=TransactionStatus.SUCCESSFUL && bankAccount.amount>transaction.amount){
+        if(transaction.status!= TransactionStatus.SUCCESSFUL && bankAccount.amount>transaction.amount){
             System.out.println("Paying "+ transaction.amount + " via Bank account "+ this.bankAccount.bankAccount);
             bankAccount.amount-=transaction.amount;
             System.out.println("Remaining balance in Sender "+bankAccount.bankAccount+" :"+bankAccount.amount);
