@@ -27,8 +27,8 @@ public class RegisterUserCommand implements Icommand {
         User user = new User(name,emailID,phone);
         Repo.userId_User_Mapping.put(phone,user);
 
-        Wallet wallet = new Wallet(user.getContactNumber(),0);
-
+        Wallet wallet = new Wallet(user.getContactNumber(),1000);
+        Repo.userID_WalletID_Mapping.put(user.getContactNumber(), wallet);
         System.out.println("User Registered you can login now.");
     }
 }

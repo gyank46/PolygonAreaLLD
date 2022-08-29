@@ -2,7 +2,7 @@ package com.example.PayTm.Models;
 
 import java.util.Date;
 
-public class Card {
+public class Card extends Recipient{
     public String ownerName;
     public String cardNumber;
     public String CVV;

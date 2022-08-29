@@ -15,7 +15,7 @@ public class MakePaymentViaUPI implements MakePayment {
     @Override
     public void makePayment(Transaction transaction) {
         if(transaction.status != TransactionStatus.SUCCESSFUL){
-            System.out.println("Paying "+transaction.amount+" via UPIiD "+this.upiId.upiID);
+            System.out.println("Paying "+transaction.amount+" via UPIiD "+this.upiId.id);
             transaction.status = TransactionStatus.SUCCESSFUL;
         }
 

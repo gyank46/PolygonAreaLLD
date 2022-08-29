@@ -3,7 +3,7 @@ package com.example.PayTm.Models;
 import java.security.PublicKey;
 import java.util.UUID;
 
-public class BankAccount{
+public class BankAccount extends Recipient{
     public String bankName;
     public String ifscCode;
     public String bankAccount;

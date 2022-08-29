@@ -41,6 +41,7 @@ public class LoginUserCommand implements Icommand {
             System.out.println("User doesn't exist please register");
         }else{
             session.isLoggedIn = true;
+            session.loggedUserId = phoneNumber;
         }
 
 

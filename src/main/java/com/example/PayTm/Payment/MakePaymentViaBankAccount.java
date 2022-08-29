@@ -21,7 +21,7 @@ public class MakePaymentViaBankAccount implements MakePayment {
             }else if(transaction.receiverType==ReceiverType.WALLET){
                 Wallet recipient = Repo.transactionid_wallet_mapping.get(transaction.transactionId);
                 recipient.amount+=transaction.amount;
-                System.out.println("Wallet balance of Receiver " + recipient.walletId+ " : "+ recipient.amount);
+                System.out.println("Wallet balance of Receiver " + recipient.id+ " : "+ recipient.amount);
             }
             transaction.status = TransactionStatus.SUCCESSFUL;
 
